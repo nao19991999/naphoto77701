@@ -1,0 +1,538 @@
+/************************** CSS変数 ***************************/
+
+:root {
+    --backGroundColor: #fde3c5;
+    --accentColor: #ea5506;
+    --darkColor: #3f4551;
+    --subColor: #ffd191;
+    --whiteColor: #fcfcfc;
+}
+
+/************************** サイト共通 ***************************/
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/************************** フォント ***************************/
+
+body {
+    font-family: "Murecho", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.875rem;
+    color: var(--darkColor);
+    line-height: 1.5;
+}
+
+/************************** サイト共用パーツ ***************************/
+
+/* コンテンツ幅を決めたい場所を包む */
+.contentsWrap {
+    max-width: 1024px;
+    margin-inline: auto;
+    padding-inline: 1rem;
+}
+
+#concept {
+    background-color: var(--backGroundColor);
+    padding: 2rem 4rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+    text-align: center;
+    margin-bottom: 32px;
+    font-weight: bold;
+}
+h3 {
+    font-size: 1.35rem;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+/* 　**************　　header　開始　　　*************　　 */
+
+header .header01 {
+    background-color: var(--backGroundColor);
+}
+
+header .header010 {
+    max-width: 1024px;
+    height: 160px;
+    overflow: hidden;
+    padding: 0 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline: auto;
+    /* border: 3px solid #3f4551; */
+}
+
+header .header01 p:nth-child(1) {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+header .header01 p:nth-child(2) {
+    max-width: 200px;
+    height: auto;
+}
+
+header .header01 p:nth-child(3) {
+    max-width: 50px;
+    height: auto;
+}
+
+.header02 .swiper {
+    max-width: 800px; /* 画面横幅いっぱいに広げる */
+    height: auto; /* 画面高さの80%に設定 */
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-inline: auto;
+    /* border: 3px solid #3f4551; */
+    overflow: hidden;
+}
+
+.header02 .swiper .swiper-wrapper .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* スワイパーのラッパーに関する設定 */
+.header02 .swiper-wrapper {
+    display: flex; /* フレックスボックスにする */
+    transition-property: transform; /* トランジションを有効に */
+}
+
+.header02 .swiper-slide {
+    width: 100%; /* スライドの幅を100%に */
+    flex-shrink: 0; /* 縮小しないように */
+    position: relative; /* 位置の基準を設定 */
+}
+
+/* 画像のスタイル */
+.header02 .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 画像を比率を保ちながらカバー */
+    display: block; /* ブロック要素として表示 */
+}
+
+.header03 nav ul {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    text-align: center;
+    align-items: center;
+}
+
+.header03 nav ul li {
+    font-size: 1.3rem;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #fff; /* 背景色（お好みで変更可） */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 影の効果 */
+    transition: all 0.3s ease; /* スムーズな変化のためのトランジション */
+}
+
+/*  ****************  nav button　のデザイン */
+/*  *********************  nav button　design ******* */
+
+#drawerButton {
+    display: none;
+}
+
+h2 {
+    transition: all 0.5s linear;
+}
+
+.active {
+    font-size: 3rem;
+    padding: 1rem;
+    background-color: bisque;
+    color: white;
+    transition: all 0.5s linear;
+}
+
+/*   *************   regular 開始　*************** */
+
+#regular .regsec01 p {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#regular .regsec02 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch; /* center から stretch に変更 */
+    gap: 1rem;
+}
+
+#regular .regsec02 .product {
+    flex-basis: calc((100% / 3) - (2rem / 3));
+    text-align: center;
+}
+
+#regular .regsec02 .product-name {
+    margin: 0.5rem 0 0.2rem;
+    font-size: 1rem;
+}
+
+#regular .regsec02 .product-price {
+    margin: 0;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+#regular .regsec02 .img {
+    position: relative;
+    width: 100%;
+    padding-top: 100%; /* 幅と同じ高さ（正方形）を確保 */
+    overflow: hidden;
+}
+
+#regular .regsec02 .img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 　　*********  concept  開始　************* */
+
+#concept {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin: 3rem 0;
+    align-items: center;
+}
+
+#concept .Consec01 p {
+    margin-inline: auto;
+    margin-top: 1rem;
+}
+
+#concept .Consec02 .phot01 {
+    width: 100%;
+    height: auto;
+}
+
+#concept .Consec02 .phot01 img {
+    max-width: 600px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 画像の比率を保ちながら領域を埋める */
+}
+
+#concept .Consec02 .phot01 p {
+    max-width: 600px;
+}
+
+#concept .Consec02 {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+#concept .Consec02:nth-of-type(3) {
+    flex-direction: row-reverse; /* 順序を反転 */
+}
+
+/*   ****************  news 開始　　*********** */
+
+#news {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+}
+
+#news .newssec02 {
+    display: flex;
+    gap: 2rem;
+}
+
+#news .newssec02 > p {
+    max-width: 600px;
+    height: auto;
+}
+
+#news .newssec02 .newsbox01 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+}
+
+main #news .readmore {
+    margin-top: 24px;
+    text-align: right;
+}
+
+main #news .readmore button a {
+    display: block;
+    background-color: var(--accentColor);
+    color: var(--whiteColor);
+    padding: 8px 38px;
+    border-radius: 8px;
+}
+
+main #news dl dt {
+    /* destyle.cssがdtをbold(700)に変更しているので、こちらで標準の太さにしている */
+    font-weight: 400;
+}
+
+main #news dl .news_contents {
+    border-top: 2px solid var(--darkColor);
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+main #news dl .news_contents:last-child {
+    border-bottom: 2px solid var(--darkColor);
+}
+
+/*  **************  info  *************** */
+
+#infor {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 5rem 0;
+}
+
+#infor .infosec01 {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+#infor .infosec01 p {
+    max-width: 600px;
+    height: auto;
+}
+
+#infor .infosec01 .infobox01 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* 　　　 ****************  footer   ******* */
+footer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    background-color: var(--subColor);
+    padding: 2rem;
+}
+
+footer nav ul {
+    display: flex;
+    gap: 1rem;
+}
+
+footer p {
+    max-width: 200px;
+    height: auto;
+}
+
+/*    ****************  メディアクエリ ***** */
+@media screen and (max-width: 640px) {
+    .header01 .header010 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .header01 .header010 p:nth-child(3) {
+        display: none;
+    }
+
+    header02 {
+        margin-inline: 1rem;
+    }
+
+    #concept .Consec02 {
+        flex-wrap: wrap;
+    }
+
+    #news .newssec02 {
+        flex-wrap: wrap;
+    }
+    main #news .readmore {
+        margin-inline: auto;
+    }
+
+    #infor .infosec01 {
+        margin-inline: 1rem;
+        flex-wrap: wrap;
+    }
+
+    /* 下メディアクエリ閉じたぐ */
+}
+
+@media screen and (max-width: 380px) {
+    body h2 {
+        font-size: 1.55rem;
+    }
+
+    body h3 {
+        font-size: 1.15rem;
+    }
+
+    body p {
+        font-size: 0.8rem;
+    }
+
+    .header01 .header010 p:nth-child(2) {
+        max-width: 130px;
+        height: auto;
+    }
+
+    .header01 .header010 p:nth-child(1) {
+        font-size: 0.8rem;
+    }
+
+    .header01 .header010 {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .header01 .header010 {
+        padding: 0;
+    }
+
+    #regular .regsec02 .product {
+        flex-basis: calc((100% / 2) - (2rem / 2));
+        text-align: center;
+    }
+
+    #concept {
+        padding: 2rem 1rem;
+    }
+
+    #news .newssec02 .newsbox01 {
+        gap: 1rem;
+    }
+
+    main #news dl .news_contents {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    main #news dl dt {
+        margin-bottom: 0;
+    }
+
+    main #news dl dd {
+        margin: 0;
+    }
+
+    footer p {
+        max-width: 130px;
+        height: auto;
+    }
+
+    /*   *************  ドロワー作成　*********** */
+
+    #drawerButton {
+        display: block;
+        position: fixed;
+        right: 1rem;
+        top: 1rem;
+        z-index: 1000;
+    }
+    .menu-container {
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 50px;
+        padding-left: 20px; /* アイコンを左に配置 */
+    }
+
+    /* メニューアイコンのスタイル */
+    .menu-icon {
+        cursor: pointer;
+        width: 30px; /* 幅 */
+        height: 30px; /* 高さ */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* 各線のスタイル */
+    .line {
+        background-color: #333;
+        height: 4px;
+        width: 100%;
+        transition: all 0.3s ease;
+        margin-bottom: 4px;
+    }
+
+    /* メニューが開いたときのアニメーション */
+    #drawerButton.redesign .line1 {
+        transform: rotate(45deg);
+        position: relative;
+        top: 8px;
+    }
+
+    #drawerButton.redesign .line2 {
+        opacity: 0;
+    }
+
+    #drawerButton.redesign .line3 {
+        transform: rotate(-45deg);
+        position: relative;
+        bottom: 8px;
+    }
+
+    .header03 nav ul {
+        width: 80%;
+        height: 100%;
+        position: fixed;
+        right: -100%;
+        top: 0;
+        background-color: #ecf45d;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 800;
+        transition: all 0.3s linear;
+    }
+
+    .header03 nav ul.open {
+        right: 0;
+        transition: all 0.3s linear;
+    }
+
+    /* 下メディアクエリ閉じたぐ */
+}
